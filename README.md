@@ -7,3 +7,6 @@
 - Data Engineering
 - Software Engineering
 
+## Support and Info
+email: support [AT] thoughtvine.nl
+portal: thoughtvine.atlassian.net
