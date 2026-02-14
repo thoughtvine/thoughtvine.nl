@@ -1,142 +1,257 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — Museumate</title>
-  <meta name="description" content="Museumate privacy policy. Learn how your data is handled.">
-  <meta name="theme-color" content="#1b2845" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0d1525" media="(prefers-color-scheme: dark)">
-  <link rel="icon" type="image/png" sizes="180x180" href="images/app-icon.png">
-  <link rel="apple-touch-icon" href="images/app-icon.png">
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    .page-header {
-      background: linear-gradient(160deg, var(--color-hero-gradient-start), var(--color-hero-gradient-end));
-      padding: calc(56px + 48px) 24px 48px;
-      text-align: center;
-    }
-    .page-header__title {
-      font-family: var(--font-display);
-      font-size: clamp(28px, 5vw, 44px);
-      font-weight: 700;
-      color: var(--color-hero-text);
-      letter-spacing: -0.02em;
-    }
-    .page-header__subtitle {
-      font-size: 15px;
-      color: var(--color-hero-text-secondary);
-      margin-top: 8px;
-    }
-    .page-content {
-      max-width: var(--max-width-narrow);
-      margin: 0 auto;
-      padding: 48px 24px var(--spacing-section);
-    }
-    .page-content h2 {
-      font-family: var(--font-display);
-      font-size: 22px;
-      font-weight: 600;
-      margin-top: 40px;
-      margin-bottom: 12px;
-      letter-spacing: -0.01em;
-    }
-    .page-content p {
-      font-size: 16px;
-      line-height: 1.65;
-      color: var(--color-text-secondary);
-      margin-bottom: 16px;
-    }
-    .page-content ul {
-      list-style: disc;
-      padding-left: 24px;
-      margin-bottom: 16px;
-    }
-    .page-content li {
-      font-size: 16px;
-      line-height: 1.65;
-      color: var(--color-text-secondary);
-      margin-bottom: 8px;
-    }
-  </style>
-</head>
-<body>
-
-  <nav class="nav" id="nav">
-    <div class="nav__container">
-      <a href="index.html" class="nav__logo">
-        <img src="images/app-icon.png" alt="Museumate app icon" class="nav__icon" width="32" height="32">
-        <span class="nav__name">Museumate</span>
-      </a>
-      <ul class="nav__links" id="nav-links" style="opacity:1;visibility:visible;position:static;flex-direction:row;gap:32px;background:none;">
-        <li><a href="index.html" class="nav__link" style="font-size:14px;">Home</a></li>
-        <li><a href="support.html" class="nav__link" style="font-size:14px;">Support</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <header class="page-header">
-    <h1 class="page-header__title">Privacy Policy</h1>
-    <p class="page-header__subtitle">Last updated: February 2025</p>
-  </header>
-
-  <main class="page-content">
-    <p>Museumate is committed to protecting your privacy. This policy describes how the app handles your information.</p>
-
-    <h2>Data Collection</h2>
-    <p>Museumate does not collect, transmit, or share any personal data with third parties. The app does not contain any analytics, advertising SDKs, or tracking services.</p>
-
-    <h2>Data Storage</h2>
-    <p>All data you create in Museumate is stored locally on your device and, if enabled, in your personal iCloud account. This includes:</p>
-    <ul>
-      <li>Museum visit records (dates, ratings)</li>
-      <li>Journal entries and photos</li>
-      <li>Wishlist selections</li>
-      <li>App preferences and settings</li>
-    </ul>
-
-    <h2>iCloud Sync</h2>
-    <p>If iCloud is enabled on your device, Museumate may sync your visit data and journal entries across your devices using Apple's CloudKit service. This data is stored in your personal iCloud account and is governed by Apple's privacy policies. Museumate does not have access to your iCloud credentials.</p>
-
-    <h2>Photos</h2>
-    <p>Photos you add to journal entries are stored locally on your device in the app's sandboxed storage. They are not uploaded to any external servers. Photo library access is requested only when you choose to add a photo to a journal entry.</p>
-
-    <h2>Location</h2>
-    <p>Museumate may request access to your location to show your position on the museum map. Location data is used solely within the app and is never transmitted or stored externally. You can deny or revoke location access at any time in your device settings.</p>
-
-    <h2>Museum Data</h2>
-    <p>The museum directory data (names, addresses, descriptions, coordinates) is bundled within the app and may be refreshed from a remote source. This data is publicly available information about Dutch museums and does not contain any personal information.</p>
-
-    <h2>Third-Party Services</h2>
-    <p>Museumate does not use any third-party services, SDKs, or APIs beyond Apple's native frameworks (MapKit for maps, CloudKit for sync, PhotosUI for photo selection).</p>
-
-    <h2>Children's Privacy</h2>
-    <p>Museumate does not knowingly collect any information from children. The app does not require account creation or personal information of any kind.</p>
-
-    <h2>Changes to This Policy</h2>
-    <p>If this privacy policy changes, the updated version will be posted on this page with a new revision date.</p>
-
-    <h2>Contact</h2>
-    <p>If you have questions about this privacy policy, please visit the <a href="support.html" style="color:var(--color-accent-light);text-decoration:underline;">support page</a>.</p>
-  </main>
-
-  <footer class="footer">
-    <div class="footer__container">
-      <div class="footer__top">
-        <div class="footer__brand">
-          <img src="images/app-icon.png" alt="" class="footer__icon" width="32" height="32">
-          <span class="footer__name">Museumate</span>
-        </div>
-        <nav class="footer__nav" aria-label="Footer navigation">
-          <a href="privacy.html" class="footer__link">Privacy Policy</a>
-          <a href="support.html" class="footer__link">Support</a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Privacy Policy — Museumate</title>
+        <meta
+            name="description"
+            content="Museumate privacy policy. Learn how your data is handled."
+        />
+        <meta
+            name="theme-color"
+            content="#1b2845"
+            media="(prefers-color-scheme: light)"
+        />
+        <meta
+            name="theme-color"
+            content="#0d1525"
+            media="(prefers-color-scheme: dark)"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="180x180"
+            href="images/app-icon.png"
+        />
+        <link rel="apple-touch-icon" href="images/app-icon.png" />
+        <link rel="stylesheet" href="css/style.css" />
+        <style>
+            .page-header {
+                background: linear-gradient(
+                    160deg,
+                    var(--color-hero-gradient-start),
+                    var(--color-hero-gradient-end)
+                );
+                padding: calc(56px + 48px) 24px 48px;
+                text-align: center;
+            }
+            .page-header__title {
+                font-family: var(--font-display);
+                font-size: clamp(28px, 5vw, 44px);
+                font-weight: 700;
+                color: var(--color-hero-text);
+                letter-spacing: -0.02em;
+            }
+            .page-header__subtitle {
+                font-size: 15px;
+                color: var(--color-hero-text-secondary);
+                margin-top: 8px;
+            }
+            .page-content {
+                max-width: var(--max-width-narrow);
+                margin: 0 auto;
+                padding: 48px 24px var(--spacing-section);
+            }
+            .page-content h2 {
+                font-family: var(--font-display);
+                font-size: 22px;
+                font-weight: 600;
+                margin-top: 40px;
+                margin-bottom: 12px;
+                letter-spacing: -0.01em;
+            }
+            .page-content p {
+                font-size: 16px;
+                line-height: 1.65;
+                color: var(--color-text-secondary);
+                margin-bottom: 16px;
+            }
+            .page-content ul {
+                list-style: disc;
+                padding-left: 24px;
+                margin-bottom: 16px;
+            }
+            .page-content li {
+                font-size: 16px;
+                line-height: 1.65;
+                color: var(--color-text-secondary);
+                margin-bottom: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="nav" id="nav">
+            <div class="nav__container">
+                <a href="index.html" class="nav__logo">
+                    <img
+                        src="images/app-icon.png"
+                        alt="Museumate app icon"
+                        class="nav__icon"
+                        width="32"
+                        height="32"
+                    />
+                    <span class="nav__name">Museumate</span>
+                </a>
+                <ul
+                    class="nav__links"
+                    id="nav-links"
+                    style="
+                        opacity: 1;
+                        visibility: visible;
+                        position: static;
+                        flex-direction: row;
+                        gap: 32px;
+                        background: none;
+                    "
+                >
+                    <li>
+                        <a
+                            href="index.html"
+                            class="nav__link"
+                            style="font-size: 14px"
+                            >Home</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="support.html"
+                            class="nav__link"
+                            style="font-size: 14px"
+                            >Support</a
+                        >
+                    </li>
+                </ul>
+            </div>
         </nav>
-      </div>
-      <div class="footer__bottom">
-        <p class="footer__copyright">Copyright 2025 Museumate. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
 
-</body>
+        <header class="page-header">
+            <h1 class="page-header__title">Privacy Policy</h1>
+            <p class="page-header__subtitle">Last updated: February 2025</p>
+        </header>
+
+        <main class="page-content">
+            <p>
+                Museumate is committed to protecting your privacy. This policy
+                describes how the app handles your information.
+            </p>
+
+            <h2>Data Collection</h2>
+            <p>
+                Museumate does not collect, transmit, or share any personal data
+                with third parties. The app does not contain any analytics,
+                advertising SDKs, or tracking services.
+            </p>
+
+            <h2>Data Storage</h2>
+            <p>
+                All data you create in Museumate is stored locally on your
+                device and, if enabled, in your personal iCloud account. This
+                includes:
+            </p>
+            <ul>
+                <li>Museum visit records (dates, ratings)</li>
+                <li>Journal entries and photos</li>
+                <li>Wishlist selections</li>
+                <li>App preferences and settings</li>
+            </ul>
+
+            <h2>iCloud Sync</h2>
+            <p>
+                If iCloud is enabled on your device, Museumate may sync your
+                visit data and journal entries across your devices using Apple's
+                CloudKit service. This data is stored in your personal iCloud
+                account and is governed by Apple's privacy policies. Museumate
+                does not have access to your iCloud credentials.
+            </p>
+
+            <h2>Photos</h2>
+            <p>
+                Photos you add to journal entries are stored locally on your
+                device in the app's sandboxed storage. They are not uploaded to
+                any external servers. Photo library access is requested only
+                when you choose to add a photo to a journal entry.
+            </p>
+
+            <h2>Location</h2>
+            <p>
+                Museumate may request access to your location to show your
+                position on the museum map. Location data is used solely within
+                the app and is never transmitted or stored externally. You can
+                deny or revoke location access at any time in your device
+                settings.
+            </p>
+
+            <h2>Museum Data</h2>
+            <p>
+                The museum directory data (names, addresses, descriptions,
+                coordinates) is bundled within the app and may be refreshed from
+                a remote source. This data is publicly available information
+                about Dutch museums and does not contain any personal
+                information.
+            </p>
+
+            <h2>Third-Party Services</h2>
+            <p>
+                Museumate does not use any third-party services, SDKs, or APIs
+                beyond Apple's native frameworks (MapKit for maps, CloudKit for
+                sync, PhotosUI for photo selection).
+            </p>
+
+            <h2>Children's Privacy</h2>
+            <p>
+                Museumate does not knowingly collect any information from
+                children. The app does not require account creation or personal
+                information of any kind.
+            </p>
+
+            <h2>Changes to This Policy</h2>
+            <p>
+                If this privacy policy changes, the updated version will be
+                posted on this page with a new revision date.
+            </p>
+
+            <h2>Contact</h2>
+            <p>
+                If you have questions about this privacy policy, please visit
+                the
+                <a
+                    href="support.html"
+                    style="
+                        color: var(--color-accent-light);
+                        text-decoration: underline;
+                    "
+                    >support page</a
+                >.
+            </p>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__top">
+                    <div class="footer__brand">
+                        <img
+                            src="images/app-icon.png"
+                            alt=""
+                            class="footer__icon"
+                            width="32"
+                            height="32"
+                        />
+                        <span class="footer__name">Museumate</span>
+                    </div>
+                    <nav class="footer__nav" aria-label="Footer navigation">
+                        <a href="privacy.html" class="footer__link"
+                            >Privacy Policy</a
+                        >
+                        <a href="support.html" class="footer__link">Support</a>
+                    </nav>
+                </div>
+                <div class="footer__bottom">
+                    <p class="footer__copyright">
+                        Copyright 2026 Museumate. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </body>
 </html>

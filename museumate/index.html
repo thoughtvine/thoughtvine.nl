@@ -1,298 +1,635 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Museumate — Track Your Museum Visits Across the Netherlands</title>
-  <meta name="description" content="Museumate is a native iOS app for tracking museum visits across the Netherlands. Browse 323 Dutch museums, mark visits, write journal entries, and track your progress.">
-  <meta name="theme-color" content="#1b2845" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0d1525" media="(prefers-color-scheme: dark)">
-  <meta property="og:title" content="Museumate — Track Your Museum Visits Across the Netherlands">
-  <meta property="og:description" content="Browse 323 Dutch museums, mark visits, write journal entries with photos, and track your progress with statistics and achievements.">
-  <meta property="og:image" content="images/app-icon.png">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Museumate — Track Your Museum Visits">
-  <meta name="twitter:description" content="The companion app for exploring every museum in the Netherlands.">
-  <link rel="icon" type="image/png" sizes="180x180" href="images/app-icon.png">
-  <link rel="apple-touch-icon" href="images/app-icon.png">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-  <!-- Navigation -->
-  <nav class="nav" id="nav">
-    <div class="nav__container">
-      <a href="#" class="nav__logo">
-        <img src="images/app-icon.png" alt="Museumate app icon" class="nav__icon" width="32" height="32">
-        <span class="nav__name">Museumate</span>
-      </a>
-      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span class="nav__toggle-bar"></span>
-        <span class="nav__toggle-bar"></span>
-        <span class="nav__toggle-bar"></span>
-      </button>
-      <ul class="nav__links" id="nav-links">
-        <li><a href="#features" class="nav__link">Features</a></li>
-        <li><a href="#screenshots" class="nav__link">Screenshots</a></li>
-        <li><a href="#about" class="nav__link">About</a></li>
-        <li><a href="#" class="nav__link nav__link--cta">Download</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <main>
-
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-      <div class="hero__content">
-        <div class="hero__text">
-          <div class="hero__badge">
-            <img src="images/app-icon.png" alt="" class="hero__badge-icon" width="64" height="64">
-            <span class="hero__badge-label">iOS App</span>
-          </div>
-          <h1 class="hero__title">Every museum in the Netherlands,<br> in your pocket.</h1>
-          <p class="hero__subtitle">Museumate helps you discover, visit, and remember 323 Dutch museums. Track your visits, write journal entries, earn achievements, and never miss a hidden gem.</p>
-          <div class="hero__actions">
-            <a href="#" class="app-store-badge" aria-label="Download on the App Store">
-              <svg viewBox="0 0 120 40" width="156" height="52" role="img" aria-hidden="true">
-                <rect width="120" height="40" rx="6" fill="#000"/>
-                <g fill="#fff">
-                  <path d="M24.769 20.3a4.949 4.949 0 0 1 2.356-4.151 5.066 5.066 0 0 0-3.99-2.158c-1.68-.176-3.308 1.005-4.164 1.005-.872 0-2.19-.988-3.608-.958a5.315 5.315 0 0 0-4.473 2.728c-1.934 3.348-.491 8.269 1.361 10.976.927 1.325 2.01 2.805 3.428 2.753 1.387-.058 1.905-.885 3.58-.885 1.658 0 2.144.885 3.59.852 1.489-.025 2.426-1.332 3.32-2.669a10.962 10.962 0 0 0 1.52-3.092 4.782 4.782 0 0 1-2.92-4.4zM22.037 12.21a4.872 4.872 0 0 0 1.115-3.49 4.957 4.957 0 0 0-3.208 1.66 4.636 4.636 0 0 0-1.144 3.36 4.1 4.1 0 0 0 3.237-1.53z"/>
-                  <text font-family="-apple-system, 'Helvetica Neue', sans-serif" font-size="7.5" x="36.5" y="15.5" font-weight="400" letter-spacing="0">Download on the</text>
-                  <text font-family="-apple-system, 'Helvetica Neue', sans-serif" font-size="13" x="36.5" y="29" font-weight="600" letter-spacing="-0.2">App Store</text>
-                </g>
-              </svg>
-            </a>
-            <span class="hero__availability">Free on iOS 26+</span>
-          </div>
-        </div>
-        <div class="hero__device">
-          <div class="device-frame">
-            <img src="images/screenshot-directory.jpg" alt="Museumate directory screen showing museum listings with type and region filters" class="device-frame__screen" width="390" height="844" loading="eager">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Stats Bar -->
-    <section class="stats" aria-label="App statistics">
-      <div class="stats__container">
-        <div class="stats__item fade-in">
-          <span class="stats__number">323</span>
-          <span class="stats__label">Museums</span>
-        </div>
-        <div class="stats__divider" aria-hidden="true"></div>
-        <div class="stats__item fade-in">
-          <span class="stats__number">13</span>
-          <span class="stats__label">Categories</span>
-        </div>
-        <div class="stats__divider" aria-hidden="true"></div>
-        <div class="stats__item fade-in">
-          <span class="stats__number">12</span>
-          <span class="stats__label">Provinces</span>
-        </div>
-        <div class="stats__divider" aria-hidden="true"></div>
-        <div class="stats__item fade-in">
-          <span class="stats__number">18</span>
-          <span class="stats__label">Achievements</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-      <div class="features__container">
-        <h2 class="section-title fade-in">Everything you need to explore Dutch museums.</h2>
-        <p class="section-subtitle fade-in">Museumate is your companion for discovering, visiting, and remembering museums across the Netherlands.</p>
-
-        <div class="features__grid">
-          <div class="feature-card fade-in">
-            <div class="feature-card__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="7" height="7" rx="1.5"/>
-                <rect x="14" y="3" width="7" height="7" rx="1.5"/>
-                <rect x="3" y="14" width="7" height="7" rx="1.5"/>
-                <rect x="14" y="14" width="7" height="7" rx="1.5"/>
-              </svg>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Museumate — Track Your Museum Visits Across the Netherlands
+        </title>
+        <meta
+            name="description"
+            content="Museumate is a native iOS app for tracking museum visits across the Netherlands. Browse 323 Dutch museums, mark visits, write journal entries, and track your progress."
+        />
+        <meta
+            name="theme-color"
+            content="#1b2845"
+            media="(prefers-color-scheme: light)"
+        />
+        <meta
+            name="theme-color"
+            content="#0d1525"
+            media="(prefers-color-scheme: dark)"
+        />
+        <meta
+            property="og:title"
+            content="Museumate — Track Your Museum Visits Across the Netherlands"
+        />
+        <meta
+            property="og:description"
+            content="Browse 323 Dutch museums, mark visits, write journal entries with photos, and track your progress with statistics and achievements."
+        />
+        <meta property="og:image" content="images/app-icon.png" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="Museumate — Track Your Museum Visits"
+        />
+        <meta
+            name="twitter:description"
+            content="The companion app for exploring every museum in the Netherlands."
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="180x180"
+            href="images/app-icon.png"
+        />
+        <link rel="apple-touch-icon" href="images/app-icon.png" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="nav" id="nav">
+            <div class="nav__container">
+                <a href="#" class="nav__logo">
+                    <img
+                        src="images/app-icon.png"
+                        alt="Museumate app icon"
+                        class="nav__icon"
+                        width="32"
+                        height="32"
+                    />
+                    <span class="nav__name">Museumate</span>
+                </a>
+                <button
+                    class="nav__toggle"
+                    id="nav-toggle"
+                    aria-label="Toggle navigation menu"
+                    aria-expanded="false"
+                >
+                    <span class="nav__toggle-bar"></span>
+                    <span class="nav__toggle-bar"></span>
+                    <span class="nav__toggle-bar"></span>
+                </button>
+                <ul class="nav__links" id="nav-links">
+                    <li><a href="#features" class="nav__link">Features</a></li>
+                    <li>
+                        <a href="#screenshots" class="nav__link">Screenshots</a>
+                    </li>
+                    <li><a href="#about" class="nav__link">About</a></li>
+                    <li>
+                        <a href="#" class="nav__link nav__link--cta"
+                            >Download</a
+                        >
+                    </li>
+                </ul>
             </div>
-            <h3 class="feature-card__title">Museum Directory</h3>
-            <p class="feature-card__text">Browse all 323 Dutch museums. Filter by 13 types -- from art and history to maritime and science -- and 12 provinces.</p>
-          </div>
-
-          <div class="feature-card fade-in">
-            <div class="feature-card__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 6L9 17l-5-5"/>
-              </svg>
-            </div>
-            <h3 class="feature-card__title">Visit Tracking</h3>
-            <p class="feature-card__text">Mark museums as visited, rate your experience, and build a visual history of your cultural explorations across the country.</p>
-          </div>
-
-          <div class="feature-card fade-in">
-            <div class="feature-card__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 20h9"/>
-                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
-              </svg>
-            </div>
-            <h3 class="feature-card__title">Journal</h3>
-            <p class="feature-card__text">Capture your thoughts and photos with rich text journal entries. Every visit becomes a memory you can revisit.</p>
-          </div>
-
-          <div class="feature-card fade-in">
-            <div class="feature-card__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-            </div>
-            <h3 class="feature-card__title">Interactive Map</h3>
-            <p class="feature-card__text">See every museum on a color-coded map. Filter by type, region, or visited status. Spot clusters and plan your next trip.</p>
-          </div>
-
-          <div class="feature-card fade-in">
-            <div class="feature-card__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M8 21V11h8v10"/>
-                <path d="M4 21h16"/>
-                <path d="M12 3v4"/>
-                <path d="M3 13l4-4 4 4"/>
-                <path d="M13 13l4-4 4 4"/>
-              </svg>
-            </div>
-            <h3 class="feature-card__title">Statistics</h3>
-            <p class="feature-card__text">Track your progress with beautiful charts. See visits by type and region, unlock 18 achievement badges, and complete streaks.</p>
-          </div>
-
-          <div class="feature-card fade-in">
-            <div class="feature-card__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
-                <path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49"/>
-                <line x1="12" y1="2" x2="12" y2="6"/>
-                <line x1="12" y1="18" x2="12" y2="22"/>
-              </svg>
-            </div>
-            <h3 class="feature-card__title">iCloud Sync</h3>
-            <p class="feature-card__text">Your visits and journal entries sync seamlessly across all your devices via iCloud. Start on iPhone, continue on iPad.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Screenshots Section -->
-    <section class="screenshots" id="screenshots">
-      <div class="screenshots__container">
-        <h2 class="section-title fade-in">See it in action.</h2>
-        <p class="section-subtitle fade-in">A clean, native interface designed to feel right at home on iOS.</p>
-
-        <div class="screenshots__gallery">
-          <div class="screenshots__track">
-            <div class="screenshot-item fade-in">
-              <div class="device-frame device-frame--gallery">
-                <img src="images/screenshot-directory.jpg" alt="Museum directory with filter chips for type and region" class="device-frame__screen" width="390" height="844" loading="lazy">
-              </div>
-              <p class="screenshot-item__caption">Browse & Filter</p>
-            </div>
-            <div class="screenshot-item fade-in">
-              <div class="device-frame device-frame--gallery">
-                <img src="images/screenshot-detail.jpg" alt="Museum detail view showing location, description, and opening hours" class="device-frame__screen" width="390" height="844" loading="lazy">
-              </div>
-              <p class="screenshot-item__caption">Museum Details</p>
-            </div>
-            <div class="screenshot-item fade-in">
-              <div class="device-frame device-frame--gallery">
-                <img src="images/screenshot-map.jpg" alt="Full map of the Netherlands with color-coded museum pins" class="device-frame__screen" width="390" height="844" loading="lazy">
-              </div>
-              <p class="screenshot-item__caption">Interactive Map</p>
-            </div>
-            <div class="screenshot-item fade-in">
-              <div class="device-frame device-frame--gallery">
-                <img src="images/screenshot-journal.jpg" alt="Journal tab for writing visit entries" class="device-frame__screen" width="390" height="844" loading="lazy">
-              </div>
-              <p class="screenshot-item__caption">Journal</p>
-            </div>
-            <div class="screenshot-item fade-in">
-              <div class="device-frame device-frame--gallery">
-                <img src="images/screenshot-statistics.jpg" alt="Statistics dashboard with visit charts and achievements" class="device-frame__screen" width="390" height="844" loading="lazy">
-              </div>
-              <p class="screenshot-item__caption">Statistics</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Highlights Section -->
-    <section class="highlights" id="about">
-      <div class="highlights__container">
-        <h2 class="section-title fade-in">Built with care, for museum lovers.</h2>
-        <p class="section-subtitle fade-in">Museumate is a passion project crafted with native iOS technologies. No subscriptions, no ads, no tracking.</p>
-
-        <div class="highlights__grid">
-          <div class="highlight fade-in">
-            <h3 class="highlight__title">100% Native</h3>
-            <p class="highlight__text">Built entirely with SwiftUI and SwiftData. No external dependencies, no web views. Fast, smooth, and power-efficient.</p>
-          </div>
-          <div class="highlight fade-in">
-            <h3 class="highlight__title">Bilingual</h3>
-            <p class="highlight__text">Full English and Dutch support. Museum names and descriptions adapt to your preferred language.</p>
-          </div>
-          <div class="highlight fade-in">
-            <h3 class="highlight__title">Accessible</h3>
-            <p class="highlight__text">Complete VoiceOver support, Dynamic Type, and respect for reduced motion preferences. Everyone is welcome.</p>
-          </div>
-          <div class="highlight fade-in">
-            <h3 class="highlight__title">Private</h3>
-            <p class="highlight__text">Your data stays on your device and in your personal iCloud. No analytics, no third-party services, no compromises.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-      <div class="cta__container fade-in">
-        <img src="images/app-icon.png" alt="" class="cta__icon" width="96" height="96">
-        <h2 class="cta__title">Start your museum journey today.</h2>
-        <p class="cta__text">Download Museumate for free and discover every museum the Netherlands has to offer.</p>
-        <a href="#" class="app-store-badge app-store-badge--large" aria-label="Download on the App Store">
-          <svg viewBox="0 0 120 40" width="180" height="60" role="img" aria-hidden="true">
-            <rect width="120" height="40" rx="6" fill="#000"/>
-            <g fill="#fff">
-              <path d="M24.769 20.3a4.949 4.949 0 0 1 2.356-4.151 5.066 5.066 0 0 0-3.99-2.158c-1.68-.176-3.308 1.005-4.164 1.005-.872 0-2.19-.988-3.608-.958a5.315 5.315 0 0 0-4.473 2.728c-1.934 3.348-.491 8.269 1.361 10.976.927 1.325 2.01 2.805 3.428 2.753 1.387-.058 1.905-.885 3.58-.885 1.658 0 2.144.885 3.59.852 1.489-.025 2.426-1.332 3.32-2.669a10.962 10.962 0 0 0 1.52-3.092 4.782 4.782 0 0 1-2.92-4.4zM22.037 12.21a4.872 4.872 0 0 0 1.115-3.49 4.957 4.957 0 0 0-3.208 1.66 4.636 4.636 0 0 0-1.144 3.36 4.1 4.1 0 0 0 3.237-1.53z"/>
-              <text font-family="-apple-system, 'Helvetica Neue', sans-serif" font-size="7.5" x="36.5" y="15.5" font-weight="400" letter-spacing="0">Download on the</text>
-              <text font-family="-apple-system, 'Helvetica Neue', sans-serif" font-size="13" x="36.5" y="29" font-weight="600" letter-spacing="-0.2">App Store</text>
-            </g>
-          </svg>
-        </a>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer__container">
-      <div class="footer__top">
-        <div class="footer__brand">
-          <img src="images/app-icon.png" alt="" class="footer__icon" width="40" height="40">
-          <span class="footer__name">Museumate</span>
-        </div>
-        <nav class="footer__nav" aria-label="Footer navigation">
-          <a href="privacy.html" class="footer__link">Privacy Policy</a>
-          <a href="support.html" class="footer__link">Support</a>
         </nav>
-      </div>
-      <div class="footer__bottom">
-        <p class="footer__copyright">Copyright 2025 Museumate. All rights reserved.</p>
-        <p class="footer__note">Apple, the Apple logo, iPhone, and App Store are trademarks of Apple Inc.</p>
-      </div>
-    </div>
-  </footer>
 
-  <script src="js/main.js" defer></script>
-</body>
+        <main>
+            <!-- Hero Section -->
+            <section class="hero" id="hero">
+                <div class="hero__content">
+                    <div class="hero__text">
+                        <div class="hero__badge">
+                            <img
+                                src="images/app-icon.png"
+                                alt=""
+                                class="hero__badge-icon"
+                                width="64"
+                                height="64"
+                            />
+                            <span class="hero__badge-label">iOS App</span>
+                        </div>
+                        <h1 class="hero__title">
+                            Every museum in the Netherlands,<br />
+                            in your pocket.
+                        </h1>
+                        <p class="hero__subtitle">
+                            Museumate helps you discover, visit, and remember
+                            323 Dutch museums. Track your visits, write journal
+                            entries, earn achievements, and never miss a hidden
+                            gem.
+                        </p>
+                        <div class="hero__actions">
+                            <a
+                                href="#"
+                                class="app-store-badge"
+                                aria-label="Download on the App Store"
+                            >
+                                <svg
+                                    viewBox="0 0 120 40"
+                                    width="156"
+                                    height="52"
+                                    role="img"
+                                    aria-hidden="true"
+                                >
+                                    <rect
+                                        width="120"
+                                        height="40"
+                                        rx="6"
+                                        fill="#000"
+                                    />
+                                    <g fill="#fff">
+                                        <path
+                                            d="M24.769 20.3a4.949 4.949 0 0 1 2.356-4.151 5.066 5.066 0 0 0-3.99-2.158c-1.68-.176-3.308 1.005-4.164 1.005-.872 0-2.19-.988-3.608-.958a5.315 5.315 0 0 0-4.473 2.728c-1.934 3.348-.491 8.269 1.361 10.976.927 1.325 2.01 2.805 3.428 2.753 1.387-.058 1.905-.885 3.58-.885 1.658 0 2.144.885 3.59.852 1.489-.025 2.426-1.332 3.32-2.669a10.962 10.962 0 0 0 1.52-3.092 4.782 4.782 0 0 1-2.92-4.4zM22.037 12.21a4.872 4.872 0 0 0 1.115-3.49 4.957 4.957 0 0 0-3.208 1.66 4.636 4.636 0 0 0-1.144 3.36 4.1 4.1 0 0 0 3.237-1.53z"
+                                        />
+                                        <text
+                                            font-family="-apple-system, 'Helvetica Neue', sans-serif"
+                                            font-size="7.5"
+                                            x="36.5"
+                                            y="15.5"
+                                            font-weight="400"
+                                            letter-spacing="0"
+                                        >
+                                            Download on the
+                                        </text>
+                                        <text
+                                            font-family="-apple-system, 'Helvetica Neue', sans-serif"
+                                            font-size="13"
+                                            x="36.5"
+                                            y="29"
+                                            font-weight="600"
+                                            letter-spacing="-0.2"
+                                        >
+                                            App Store
+                                        </text>
+                                    </g>
+                                </svg>
+                            </a>
+                            <span class="hero__availability"
+                                >Free on iOS 26+</span
+                            >
+                        </div>
+                    </div>
+                    <div class="hero__device">
+                        <div class="device-frame">
+                            <img
+                                src="images/screenshot-directory.jpg"
+                                alt="Museumate directory screen showing museum listings with type and region filters"
+                                class="device-frame__screen"
+                                width="390"
+                                height="844"
+                                loading="eager"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats Bar -->
+            <section class="stats" aria-label="App statistics">
+                <div class="stats__container">
+                    <div class="stats__item fade-in">
+                        <span class="stats__number">323</span>
+                        <span class="stats__label">Museums</span>
+                    </div>
+                    <div class="stats__divider" aria-hidden="true"></div>
+                    <div class="stats__item fade-in">
+                        <span class="stats__number">13</span>
+                        <span class="stats__label">Categories</span>
+                    </div>
+                    <div class="stats__divider" aria-hidden="true"></div>
+                    <div class="stats__item fade-in">
+                        <span class="stats__number">12</span>
+                        <span class="stats__label">Provinces</span>
+                    </div>
+                    <div class="stats__divider" aria-hidden="true"></div>
+                    <div class="stats__item fade-in">
+                        <span class="stats__number">18</span>
+                        <span class="stats__label">Achievements</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features" id="features">
+                <div class="features__container">
+                    <h2 class="section-title fade-in">
+                        Everything you need to explore Dutch museums.
+                    </h2>
+                    <p class="section-subtitle fade-in">
+                        Museumate is your companion for discovering, visiting,
+                        and remembering museums across the Netherlands.
+                    </p>
+
+                    <div class="features__grid">
+                        <div class="feature-card fade-in">
+                            <div class="feature-card__icon" aria-hidden="true">
+                                <svg
+                                    width="28"
+                                    height="28"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <rect
+                                        x="3"
+                                        y="3"
+                                        width="7"
+                                        height="7"
+                                        rx="1.5"
+                                    />
+                                    <rect
+                                        x="14"
+                                        y="3"
+                                        width="7"
+                                        height="7"
+                                        rx="1.5"
+                                    />
+                                    <rect
+                                        x="3"
+                                        y="14"
+                                        width="7"
+                                        height="7"
+                                        rx="1.5"
+                                    />
+                                    <rect
+                                        x="14"
+                                        y="14"
+                                        width="7"
+                                        height="7"
+                                        rx="1.5"
+                                    />
+                                </svg>
+                            </div>
+                            <h3 class="feature-card__title">
+                                Museum Directory
+                            </h3>
+                            <p class="feature-card__text">
+                                Browse all 323 Dutch museums. Filter by 13 types
+                                -- from art and history to maritime and science
+                                -- and 12 provinces.
+                            </p>
+                        </div>
+
+                        <div class="feature-card fade-in">
+                            <div class="feature-card__icon" aria-hidden="true">
+                                <svg
+                                    width="28"
+                                    height="28"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M20 6L9 17l-5-5" />
+                                </svg>
+                            </div>
+                            <h3 class="feature-card__title">Visit Tracking</h3>
+                            <p class="feature-card__text">
+                                Mark museums as visited, rate your experience,
+                                and build a visual history of your cultural
+                                explorations across the country.
+                            </p>
+                        </div>
+
+                        <div class="feature-card fade-in">
+                            <div class="feature-card__icon" aria-hidden="true">
+                                <svg
+                                    width="28"
+                                    height="28"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M12 20h9" />
+                                    <path
+                                        d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"
+                                    />
+                                </svg>
+                            </div>
+                            <h3 class="feature-card__title">Journal</h3>
+                            <p class="feature-card__text">
+                                Capture your thoughts and photos with rich text
+                                journal entries. Every visit becomes a memory
+                                you can revisit.
+                            </p>
+                        </div>
+
+                        <div class="feature-card fade-in">
+                            <div class="feature-card__icon" aria-hidden="true">
+                                <svg
+                                    width="28"
+                                    height="28"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                                    />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                            </div>
+                            <h3 class="feature-card__title">Interactive Map</h3>
+                            <p class="feature-card__text">
+                                See every museum on a color-coded map. Filter by
+                                type, region, or visited status. Spot clusters
+                                and plan your next trip.
+                            </p>
+                        </div>
+
+                        <div class="feature-card fade-in">
+                            <div class="feature-card__icon" aria-hidden="true">
+                                <svg
+                                    width="28"
+                                    height="28"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M8 21V11h8v10" />
+                                    <path d="M4 21h16" />
+                                    <path d="M12 3v4" />
+                                    <path d="M3 13l4-4 4 4" />
+                                    <path d="M13 13l4-4 4 4" />
+                                </svg>
+                            </div>
+                            <h3 class="feature-card__title">Statistics</h3>
+                            <p class="feature-card__text">
+                                Track your progress with beautiful charts. See
+                                visits by type and region, unlock 18 achievement
+                                badges, and complete streaks.
+                            </p>
+                        </div>
+
+                        <div class="feature-card fade-in">
+                            <div class="feature-card__icon" aria-hidden="true">
+                                <svg
+                                    width="28"
+                                    height="28"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
+                                    />
+                                    <path
+                                        d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49"
+                                    />
+                                    <line x1="12" y1="2" x2="12" y2="6" />
+                                    <line x1="12" y1="18" x2="12" y2="22" />
+                                </svg>
+                            </div>
+                            <h3 class="feature-card__title">iCloud Sync</h3>
+                            <p class="feature-card__text">
+                                Your visits and journal entries sync seamlessly
+                                across all your devices via iCloud. Start on
+                                iPhone, continue on iPad.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Screenshots Section -->
+            <section class="screenshots" id="screenshots">
+                <div class="screenshots__container">
+                    <h2 class="section-title fade-in">See it in action.</h2>
+                    <p class="section-subtitle fade-in">
+                        A clean, native interface designed to feel right at home
+                        on iOS.
+                    </p>
+
+                    <div class="screenshots__gallery">
+                        <div class="screenshots__track">
+                            <div class="screenshot-item fade-in">
+                                <div class="device-frame device-frame--gallery">
+                                    <img
+                                        src="images/screenshot-directory.jpg"
+                                        alt="Museum directory with filter chips for type and region"
+                                        class="device-frame__screen"
+                                        width="390"
+                                        height="844"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <p class="screenshot-item__caption">
+                                    Browse & Filter
+                                </p>
+                            </div>
+                            <div class="screenshot-item fade-in">
+                                <div class="device-frame device-frame--gallery">
+                                    <img
+                                        src="images/screenshot-detail.jpg"
+                                        alt="Museum detail view showing location, description, and opening hours"
+                                        class="device-frame__screen"
+                                        width="390"
+                                        height="844"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <p class="screenshot-item__caption">
+                                    Museum Details
+                                </p>
+                            </div>
+                            <div class="screenshot-item fade-in">
+                                <div class="device-frame device-frame--gallery">
+                                    <img
+                                        src="images/screenshot-map.jpg"
+                                        alt="Full map of the Netherlands with color-coded museum pins"
+                                        class="device-frame__screen"
+                                        width="390"
+                                        height="844"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <p class="screenshot-item__caption">
+                                    Interactive Map
+                                </p>
+                            </div>
+                            <div class="screenshot-item fade-in">
+                                <div class="device-frame device-frame--gallery">
+                                    <img
+                                        src="images/screenshot-journal.jpg"
+                                        alt="Journal tab for writing visit entries"
+                                        class="device-frame__screen"
+                                        width="390"
+                                        height="844"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <p class="screenshot-item__caption">Journal</p>
+                            </div>
+                            <div class="screenshot-item fade-in">
+                                <div class="device-frame device-frame--gallery">
+                                    <img
+                                        src="images/screenshot-statistics.jpg"
+                                        alt="Statistics dashboard with visit charts and achievements"
+                                        class="device-frame__screen"
+                                        width="390"
+                                        height="844"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <p class="screenshot-item__caption">
+                                    Statistics
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Highlights Section -->
+            <section class="highlights" id="about">
+                <div class="highlights__container">
+                    <h2 class="section-title fade-in">
+                        Built with care, for museum lovers.
+                    </h2>
+                    <p class="section-subtitle fade-in">
+                        Museumate is a passion project crafted with native iOS
+                        technologies. No subscriptions, no ads, no tracking.
+                    </p>
+
+                    <div class="highlights__grid">
+                        <div class="highlight fade-in">
+                            <h3 class="highlight__title">100% Native</h3>
+                            <p class="highlight__text">
+                                Built entirely with SwiftUI and SwiftData. No
+                                external dependencies, no web views. Fast,
+                                smooth, and power-efficient.
+                            </p>
+                        </div>
+                        <div class="highlight fade-in">
+                            <h3 class="highlight__title">Bilingual</h3>
+                            <p class="highlight__text">
+                                Full English and Dutch support. Museum names and
+                                descriptions adapt to your preferred language.
+                            </p>
+                        </div>
+                        <div class="highlight fade-in">
+                            <h3 class="highlight__title">Accessible</h3>
+                            <p class="highlight__text">
+                                Complete VoiceOver support, Dynamic Type, and
+                                respect for reduced motion preferences. Everyone
+                                is welcome.
+                            </p>
+                        </div>
+                        <div class="highlight fade-in">
+                            <h3 class="highlight__title">Private</h3>
+                            <p class="highlight__text">
+                                Your data stays on your device and in your
+                                personal iCloud. No analytics, no third-party
+                                services, no compromises.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta">
+                <div class="cta__container fade-in">
+                    <img
+                        src="images/app-icon.png"
+                        alt=""
+                        class="cta__icon"
+                        width="96"
+                        height="96"
+                    />
+                    <h2 class="cta__title">Start your museum journey today.</h2>
+                    <p class="cta__text">
+                        Download Museumate for free and discover every museum
+                        the Netherlands has to offer.
+                    </p>
+                    <a
+                        href="#"
+                        class="app-store-badge app-store-badge--large"
+                        aria-label="Download on the App Store"
+                    >
+                        <svg
+                            viewBox="0 0 120 40"
+                            width="180"
+                            height="60"
+                            role="img"
+                            aria-hidden="true"
+                        >
+                            <rect width="120" height="40" rx="6" fill="#000" />
+                            <g fill="#fff">
+                                <path
+                                    d="M24.769 20.3a4.949 4.949 0 0 1 2.356-4.151 5.066 5.066 0 0 0-3.99-2.158c-1.68-.176-3.308 1.005-4.164 1.005-.872 0-2.19-.988-3.608-.958a5.315 5.315 0 0 0-4.473 2.728c-1.934 3.348-.491 8.269 1.361 10.976.927 1.325 2.01 2.805 3.428 2.753 1.387-.058 1.905-.885 3.58-.885 1.658 0 2.144.885 3.59.852 1.489-.025 2.426-1.332 3.32-2.669a10.962 10.962 0 0 0 1.52-3.092 4.782 4.782 0 0 1-2.92-4.4zM22.037 12.21a4.872 4.872 0 0 0 1.115-3.49 4.957 4.957 0 0 0-3.208 1.66 4.636 4.636 0 0 0-1.144 3.36 4.1 4.1 0 0 0 3.237-1.53z"
+                                />
+                                <text
+                                    font-family="-apple-system, 'Helvetica Neue', sans-serif"
+                                    font-size="7.5"
+                                    x="36.5"
+                                    y="15.5"
+                                    font-weight="400"
+                                    letter-spacing="0"
+                                >
+                                    Download on the
+                                </text>
+                                <text
+                                    font-family="-apple-system, 'Helvetica Neue', sans-serif"
+                                    font-size="13"
+                                    x="36.5"
+                                    y="29"
+                                    font-weight="600"
+                                    letter-spacing="-0.2"
+                                >
+                                    App Store
+                                </text>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__top">
+                    <div class="footer__brand">
+                        <img
+                            src="images/app-icon.png"
+                            alt=""
+                            class="footer__icon"
+                            width="40"
+                            height="40"
+                        />
+                        <span class="footer__name">Museumate</span>
+                    </div>
+                    <nav class="footer__nav" aria-label="Footer navigation">
+                        <a href="privacy.html" class="footer__link"
+                            >Privacy Policy</a
+                        >
+                        <a href="support.html" class="footer__link">Support</a>
+                    </nav>
+                </div>
+                <div class="footer__bottom">
+                    <p class="footer__copyright">
+                        Copyright 2026 Museumate. All rights reserved.
+                    </p>
+                    <p class="footer__note">
+                        Apple, the Apple logo, iPhone, and App Store are
+                        trademarks of Apple Inc.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/main.js" defer></script>
+    </body>
 </html>
