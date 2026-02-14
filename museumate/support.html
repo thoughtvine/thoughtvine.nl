@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — Museumate</title>
+  <meta name="description" content="Get help with Museumate. Find answers to common questions or get in touch.">
+  <meta name="theme-color" content="#1b2845" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1525" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="180x180" href="images/app-icon.png">
+  <link rel="apple-touch-icon" href="images/app-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-header {
+      background: linear-gradient(160deg, var(--color-hero-gradient-start), var(--color-hero-gradient-end));
+      padding: calc(56px + 48px) 24px 48px;
+      text-align: center;
+    }
+    .page-header__title {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 700;
+      color: var(--color-hero-text);
+      letter-spacing: -0.02em;
+    }
+    .page-header__subtitle {
+      font-size: 15px;
+      color: var(--color-hero-text-secondary);
+      margin-top: 8px;
+    }
+    .page-content {
+      max-width: var(--max-width-narrow);
+      margin: 0 auto;
+      padding: 48px 24px var(--spacing-section);
+    }
+    .page-content h2 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 600;
+      margin-top: 40px;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+    .page-content h2:first-child {
+      margin-top: 0;
+    }
+    .page-content p {
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--color-text-secondary);
+      margin-bottom: 16px;
+    }
+
+    /* FAQ accordion */
+    .faq-item {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      margin-bottom: 12px;
+      overflow: hidden;
+      background: var(--color-card-bg);
+    }
+    .faq-item__question {
+      width: 100%;
+      text-align: left;
+      padding: 20px 24px;
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+      transition: background var(--transition-fast);
+    }
+    .faq-item__question:hover {
+      background: var(--color-bg-alt);
+    }
+    .faq-item__chevron {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      transition: transform var(--transition-normal);
+      color: var(--color-text-secondary);
+    }
+    .faq-item.is-open .faq-item__chevron {
+      transform: rotate(180deg);
+    }
+    .faq-item__answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .faq-item.is-open .faq-item__answer {
+      max-height: 400px;
+    }
+    .faq-item__answer-inner {
+      padding: 0 24px 20px;
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--color-text-secondary);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .faq-item__answer {
+        transition: none;
+      }
+      .faq-item__chevron {
+        transition: none;
+      }
+    }
+
+    .contact-card {
+      background: var(--color-card-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      text-align: center;
+      margin-top: 32px;
+    }
+    .contact-card__title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .contact-card__text {
+      font-size: 15px;
+      color: var(--color-text-secondary);
+      margin-bottom: 20px;
+    }
+    .contact-card__link {
+      display: inline-block;
+      padding: 12px 28px;
+      background: var(--color-accent);
+      color: #fff;
+      border-radius: 100px;
+      font-size: 15px;
+      font-weight: 600;
+      transition: opacity var(--transition-fast), transform var(--transition-fast);
+    }
+    .contact-card__link:hover {
+      opacity: 0.85;
+      transform: scale(1.02);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .contact-card__link:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo">
+        <img src="images/app-icon.png" alt="Museumate app icon" class="nav__icon" width="32" height="32">
+        <span class="nav__name">Museumate</span>
+      </a>
+      <ul class="nav__links" id="nav-links" style="opacity:1;visibility:visible;position:static;flex-direction:row;gap:32px;background:none;">
+        <li><a href="index.html" class="nav__link" style="font-size:14px;">Home</a></li>
+        <li><a href="privacy.html" class="nav__link" style="font-size:14px;">Privacy</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <h1 class="page-header__title">Support</h1>
+    <p class="page-header__subtitle">Find answers or get in touch</p>
+  </header>
+
+  <main class="page-content">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false">
+        <span>Is Museumate free?</span>
+        <svg class="faq-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
+      <div class="faq-item__answer">
+        <div class="faq-item__answer-inner">Yes, Museumate is completely free to download and use. There are no in-app purchases, subscriptions, or ads.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false">
+        <span>Which devices are supported?</span>
+        <svg class="faq-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
+      <div class="faq-item__answer">
+        <div class="faq-item__answer-inner">Museumate requires iOS 26 or later. It runs on iPhone and is optimized for all current iPhone models.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false">
+        <span>Does my data sync across devices?</span>
+        <svg class="faq-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
+      <div class="faq-item__answer">
+        <div class="faq-item__answer-inner">Yes. If iCloud is enabled on your device, your visits and journal entries sync automatically across all your Apple devices signed in to the same iCloud account.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false">
+        <span>Are all museums in the Netherlands included?</span>
+        <svg class="faq-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
+      <div class="faq-item__answer">
+        <div class="faq-item__answer-inner">Museumate includes 323 museums across all 12 Dutch provinces, covering 13 different categories. The directory is periodically updated. If you notice a museum that is missing, please let us know.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false">
+        <span>How do I delete my data?</span>
+        <svg class="faq-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
+      <div class="faq-item__answer">
+        <div class="faq-item__answer-inner">You can delete individual visits and journal entries within the app. To remove all data, you can delete and reinstall the app. If iCloud sync is enabled, you can also remove the app's data from iCloud via Settings on your device.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false">
+        <span>Does Museumate track my location?</span>
+        <svg class="faq-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
+      <div class="faq-item__answer">
+        <div class="faq-item__answer-inner">Museumate only uses your location while the app is open and only if you grant permission. Location data is used solely to show your position on the map and is never stored or transmitted.</div>
+      </div>
+    </div>
+
+    <h2>Still need help?</h2>
+
+    <div class="contact-card">
+      <h3 class="contact-card__title">Get in Touch</h3>
+      <p class="contact-card__text">Have a question, found a bug, or want to suggest a museum? We would love to hear from you.</p>
+      <a href="mailto:support@museumate.app" class="contact-card__link">Email Support</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img src="images/app-icon.png" alt="" class="footer__icon" width="32" height="32">
+          <span class="footer__name">Museumate</span>
+        </div>
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <a href="privacy.html" class="footer__link">Privacy Policy</a>
+          <a href="support.html" class="footer__link">Support</a>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">Copyright 2025 Museumate. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-item__question').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var item = this.closest('.faq-item');
+        var isOpen = item.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', String(isOpen));
+      });
+    });
+  </script>
+
+</body>
+</html>
